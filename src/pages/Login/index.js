@@ -12,11 +12,16 @@ function Login () {
     // values：放置的是所有表单项中用户输入的内容
     // todo:登录
     const { mobile, code } = values
-    await loginStore.getToken({ mobile, code })
-    // 跳转首页
-    navigate('/', { replace: true })
-    // 提示用户
-    message.success('登录成功')
+   try {
+      // 登录 
+      await loginStore.getToken ({mobile,code})
+      // 跳转首页
+      navigate('/',{replace:true})
+      // 提示用户登录成功
+      message.success('登录成功！')
+    } catch (error) {
+      message.error(error.response? '密码或用户名错误': '登录失败')
+    }
   }
 
   return (
@@ -43,8 +48,8 @@ function Login () {
               },
               {
                 pattern: /^1[3-9]\d{9}$/,
-                message: '请输入正确的手机号',
-                validateTrigger: 'onBlur'
+                message: '手机号不符合规则, 请输入正确的手机号!',
+                validateTrigger: 'onChange'
               }
             ]}
           >
@@ -59,12 +64,12 @@ function Login () {
               },
               {
                 len: 6,
-                message: '请输入6位密码',
+                message: '密码不符合规则, 请输入6位密码!',
                 validateTrigger: 'onBlur'
               }
             ]}
           >
-            <Input size="large" placeholder="请输入验证码" />
+            <Input size="large" placeholder="请输入密码" />
           </Form.Item>
           <Form.Item
             name="remember"
