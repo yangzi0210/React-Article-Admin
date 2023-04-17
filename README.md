@@ -1,6 +1,6 @@
 # React-Article-Admin-System
 
-<img src = 'src\assets\preview.png'>
+<img src = 'src\assets\preview.png' width=60%>
 
 ## 技术栈
 - React、React-router、React-quill、Scss、Mobx、Antd、Axios、Carco
