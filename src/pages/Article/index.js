@@ -1,5 +1,4 @@
 import img404 from '@/assets/404.png'
-import './index.scss'
 import { Link, useNavigate } from 'react-router-dom'
 import { observer } from 'mobx-react-lite'
 import { Table, Tag, Space, Card, Breadcrumb, Form, Button, Radio, DatePicker, Select } from 'antd'

@@ -19,6 +19,7 @@ import 'react-quill/dist/quill.snow.css'
 import { useStore } from '@/store'
 import { useEffect, useRef, useState } from 'react'
 import { http } from '@/utils'
+// 这里接口使用的黑马极客园 文档地址：http://geek.itheima.net/api-pc.html#u6587u7ae0u7ba1u7406
 const { Option } = Select
 const Publish = () => {
   const { channelStore } = useStore()
@@ -82,6 +83,7 @@ const Publish = () => {
         images: fileList.map(item => item.url)
       }
     }
+
     if (id) {
       await http.put(`/mp/articles/${id}?draft=false`, params)
     } else {
