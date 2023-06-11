@@ -23,7 +23,6 @@ import { http } from "@/utils";
 const { Option } = Select;
 const Publish = () => {
   const { channelStore } = useStore();
-
   // 存放上传图片的列表
   const [fileList, setFileList] = useState([]);
   // 这个函数的执行分阶段 是从updating到done的过程
