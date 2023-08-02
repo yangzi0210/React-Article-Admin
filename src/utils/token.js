@@ -1,21 +1,17 @@
-// 封装ls存取token
+// 封装 localStorage 存取 token
 
-const key = 'pc-key'
+const key = "pc-key";
 
 const setToken = (token) => {
-  return window.localStorage.setItem(key, token)
-}
+  return window.localStorage.setItem(key, token);
+};
 
 const getToken = () => {
-  return window.localStorage.getItem(key)
-}
+  return window.localStorage.getItem(key);
+};
 
 const removeToken = () => {
-  return window.localStorage.removeItem(key)
-}
+  return window.localStorage.removeItem(key);
+};
 
-export {
-  setToken,
-  getToken,
-  removeToken
-}
+export { setToken, getToken, removeToken };

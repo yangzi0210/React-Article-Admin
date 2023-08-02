@@ -2,7 +2,7 @@ import { Card, Form, Input, Checkbox, Button, message } from "antd";
 import logo from "@/assets/logo192.png";
 import { useNavigate } from "react-router-dom";
 // 导入样式文件
-import "./index.scss";
+import "./index.less";
 import { useStore } from "@/store";
 function Login() {
   const { loginStore } = useStore();

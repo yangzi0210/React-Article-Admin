@@ -13,7 +13,7 @@ import {
 import { PlusOutlined } from "@ant-design/icons";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
-import "./index.scss";
+import "./index.less";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { useStore } from "@/store";
